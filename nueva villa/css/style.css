@@ -1,55 +1,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;800;900&display=swap');
 
-*{
+:root {
+    --color1: #77cfd9;
+    --colorLogo: #a2a6f2;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Work Sans', sans-serif;
     font-size: 1rem;
 }
 
-.header{
+.header {
     display: flex;
-    background-color: #A2A6F2;
-    height: 2rem;
-    width: 100%;
     justify-content: center;
-    align-items: center;
+    width: 100;
+    height: 40px;
+    background-color: var(--color1);
+
     padding: 10px;
-    margin-right: 15px;
-}
-.header a{
-    text-decoration: none;
-    color: white;
-    margin-right: 10px;
-}
-.header__tel{
-    display: flex;
-    margin: 0;
-}
-nav{
-    background-color: #d9d9d9;
-    display: flex;
-    justify-content:space-between;
-    padding: 20px;
-    height: 4rem;
-    font-size: .8rem;
-   font-weight: 800 ;
-}
-.nav__menu a{
-    text-decoration: none;
-    color: #595959;
-    margin-right: 10px;
-    text-transform: uppercase;
+    gap: 7px;
 }
 
-.nav__menu a:hover{
-    color: #A2A6F2;
-    border-bottom: 4px solid #A2A6F2;
-    margin-top: 10px;
+.header__data {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 20px;
+    gap: 5px;
+
+}
+
+.header__data a,
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(95, 95, 95, 0.11);
+    padding: 20px;
+
+}
+
+.nav img {
+    width: 120px;
+    height: 70px;
+
+}
+
+.nav__menu a {
+    color: #545454;
+    margin-right: 10px;
+}
+
+.nav__menu a:hover {
+    color: var(--colorLogo);
+    border-bottom: 3px solid #a2a6f2;
     transition: .3s;
 }
 
+.banner {
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    background-image: url(../img/carrusel2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+
+}
+
+.banner__textos {
+    padding: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.banner__textos h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #adbefa;
+}
+
+.banner__btn {
+    box-sizing: border-box;
+    margin-top: 2rem;
+    border: none;
+    background-color: #545454;
+    color: white;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.banner__btn:hover {
+    background-color: #545454b0;
+    box-shadow: 2px 2px 2px black;
+
+}
